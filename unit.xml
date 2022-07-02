@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="rest_api.tests.WeatherEndpointWithGETListTestCase-20220702012644" tests="1" file="rest_api/tests.py" time="0.004" timestamp="2022-07-02T01:26:44" failures="0" errors="1" skipped="0">
+		<testcase classname="rest_api.tests.WeatherEndpointWithGETListTestCase" name="test_list_matches" time="0.004" timestamp="2022-07-02T01:26:44" file="rest_api/tests.py" line="115">
+			<error type="TypeError" message="string indices must be integers"><![CDATA[Traceback (most recent call last):
+  File "/Users/sowryaa/PycharmProjects/5b8b554f-b404-46f4-81a6-69707406dfde/rest_api/tests.py", line 116, in test_list_matches
+    expected_objects = sorted(self.objects, key=lambda obj: obj['id'])
+  File "/Users/sowryaa/PycharmProjects/5b8b554f-b404-46f4-81a6-69707406dfde/rest_api/tests.py", line 116, in <lambda>
+    expected_objects = sorted(self.objects, key=lambda obj: obj['id'])
+TypeError: string indices must be integers
+]]></error>
+			<system-out><![CDATA[{'date': '2019-06-11', 'lat': 41.8818, 'lon': -87.6231, 'city': 'Chicago', 'state': 'Illinois', 'temperatures': [24.0, 21.5, 24.0, 19.5, 25.5, 25.5, 24.0, 25.0, 23.0, 22.0, 18.0, 18.0, 23.5, 23.0, 23.0, 25.5, 21.0, 20.5, 20.0, 18.5, 20.5, 21.0, 25.0, 20.5]}
+]]></system-out>
+			<system-err><![CDATA[]]></system-err>
+		</testcase>
+	</testsuite>
+</testsuites>

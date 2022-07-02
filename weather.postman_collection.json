@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "648d2738-e85f-453e-a090-5333e16bc617",
+		"name": "weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/weather/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"date\": \"2018-07-12\",\n        \"latitude\": \"65.3241\",\n        \"longitude\": \"-20.5467\",\n        \"city\": \"dallas\",\n        \"state\": \"texas\",\n        \"temperatures\": [\n            12.3,\n            45.6,\n            67.8\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/weather/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"weather",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "-date",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "hyderabad,irving",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/weather/?state=texas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"date\": \"2018-07-12\",\n        \"latitude\": \"65.3241\",\n        \"longitude\": \"-20.5467\",\n        \"city\": \"dallas\",\n        \"state\": \"texas\",\n        \"temperatures\": [\n            12.3,\n            45.6,\n            67.8\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/weather/?state=texas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"weather",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "-date",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "hyderabad,irving",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "texas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/weather/?city=irving",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"date\": \"2018-07-12\",\n        \"latitude\": \"65.3241\",\n        \"longitude\": \"-20.5467\",\n        \"city\": \"dallas\",\n        \"state\": \"texas\",\n        \"temperatures\": [\n            12.3,\n            45.6,\n            67.8\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/weather/?city=irving",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"weather",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "-date",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "hyderabad,irving",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "irving"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/weather/7/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"date\": \"2018-07-12\",\n        \"latitude\": \"123.3241\",\n        \"longitude\": \"-20.5467\",\n        \"city\": \"ladakh\",\n        \"state\": \"uttarpradesh\",\n        \"temperatures\": [\n            17.3,\n            45.6,\n            67.8\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/weather/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"weather",
+						"7",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "-date",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "hyderabad,irving",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/weather/?date=2019-04-25&sort=temperatures",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/weather/?date=2019-04-25&sort=temperatures",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"weather",
+						""
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2019-04-25"
+						},
+						{
+							"key": "sort",
+							"value": "temperatures"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/weather/?date=2019-04-25&sort=date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/weather/?date=2019-04-25&sort=date",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"weather",
+						""
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2019-04-25"
+						},
+						{
+							"key": "sort",
+							"value": "date"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
